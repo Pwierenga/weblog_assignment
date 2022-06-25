@@ -1,0 +1,28 @@
+To do:
+
+You can then read those messages on the front of the website.
+ 
+As a visitor you can respond to a post with a message.
+This message can then be read under the post. With the name of the commenter underneath.
+ 
+You can show the 5 latest posts on the front.
+
+Serialize the post trough Django Rest Framework.
+
+Option
+Create admin acces trough Django Rest Framework so It can be connected to a frontend app.
+Admin can post messages from the frontend. 
+ 
+Optional 
+Docker 
+Tests
+
+
+
+
+
+Done:
+
+PostgresSQL
+As an admin (superuser) you can post messages from the admin console.
+
