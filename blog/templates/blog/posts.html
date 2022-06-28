@@ -1,0 +1,20 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+
+  <a href="{% url 'home' %}">Terug naar beginscherm</a>
+
+  <h1>Alle berichten</h1>
+
+  <p>------------------</p>
+  {% for post in posts %}
+    <h4><a href="{% url 'post_detail' pk=post.pk%}">{{ post.title }}</a></h4>
+    <p>{{ post.text }}</p>
+    <p>{{ post.created_date }}
+    <p>------------------</p>
+  {% endfor %}
+
+  {% if can_post == True %}
+    <h2><a href="{% url 'new_post' %}">Nieuw bericht</h2>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+
+<a href="{% url 'posts' %}">Terug naar alle berichten</a>
+
+<h1>{{ post.title }}</h1>
+<p>{{ post.text }}</p>
+<p>{{ post.created_date }}</p>
+
+<h1>Reactie toevoegen</h1>
+<form method="post">
+  {% csrf_token %}
+  <p>Naam:</p>
+  {{ form.author }}
+  <p>Titel:</p>
+  {{ form.title }}
+  <p>Reactie</p>
+  {{ form.text }}
+</br>
+  <button type="submit">Toevoegen</button>
+</form>
+
+<h1>Reacties</h1
+{% for reaction in reactions %}
+<p>{{ reaction.title }}</p>
+<p>{{ reaction.text }}</p>
+<p>{{ reaction.created_date }} ~{{ reaction.author }}</p>
+<p>------------------</p>
+{% endfor %}
+
+{% endblock %}

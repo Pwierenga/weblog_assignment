@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+  <h1>Nieuw bericht</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    <p>Titel:</p>
+    {{ form.title }}
+    <p>Bericht:</p>
+    {{ form.text }}
+  </br>
+    <button type="submit">Toevoegen</button>
+  </form>
+
+{% endblock %}
